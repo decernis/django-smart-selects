@@ -1,10 +1,10 @@
-import django
-from django.db.models.fields.related import (
-    ForeignKey, ManyToManyField, RECURSIVE_RELATIONSHIP_CONSTANT
-)
-from django.db import models
-from django.utils import six
+import six
 
+import django
+from django.db import models
+from django.db.models.fields.related import (
+    RECURSIVE_RELATIONSHIP_CONSTANT, ForeignKey, ManyToManyField
+)
 from smart_selects import form_fields
 
 

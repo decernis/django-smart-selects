@@ -1,13 +1,15 @@
+from six import iteritems
+
 from django.apps import apps
 from django.core.exceptions import PermissionDenied
 from django.db.models import Q
 from django.http import JsonResponse
-from django.utils.six import iteritems
 from django.views.decorators.cache import never_cache
-
-from smart_selects.db_fields import (ChainedManyToManyField, ChainedForeignKey)
-from smart_selects.utils import (get_keywords, sort_results, serialize_results,
-                                 get_queryset, get_limit_choices_to)
+from smart_selects.db_fields import ChainedForeignKey, ChainedManyToManyField
+from smart_selects.utils import (
+    get_keywords, get_limit_choices_to, get_queryset, serialize_results,
+    sort_results,
+)
 
 get_model = apps.get_model
 
